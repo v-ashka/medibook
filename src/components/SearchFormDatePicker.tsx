@@ -1,0 +1,147 @@
+import { Button } from "@chakra-ui/react";
+import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
+
+const datepickerData: Array<any> = [
+    {
+    "id": 1,
+    "dayName": "Dziś",
+    "dayDate": "08.11",
+    "availableHours": [
+        { "id": 1, "hour": "8:00", "available": false },
+         { "id": 2, "hour": "9:00", "available": false },
+         { "id": 3, "hour": "10:00", "available": true },
+         { "id": 4, "hour": "11:00", "available": true },
+         { "id": 5, "hour": "12:00", "available": true },
+         { "id": 6, "hour": "13:00", "available": true },
+         { "id": 7, "hour": "14:00", "available": false },
+         { "id": 8, "hour": "15:00", "available": false },
+         { "id": 9, "hour": "16:00", "available": true },
+        { "id": 10, "hour": "17:00", "available": false },
+        { "id": 11, "hour": "18:00", "available": true },
+        { "id": 12, "hour": "19:00", "available": true },
+        { "id": 13, "hour": "20:00", "available": false} ,
+    ]
+},
+    {
+        "id": 2,
+    "dayName": "Jutro",
+    "dayDate": "09.11",
+    "availableHours": [
+        { "id": 1, "hour": "8:00", "available": true },
+         { "id": 2, "hour": "9:00", "available": false },
+         { "id": 3, "hour": "10:00", "available": true },
+         { "id": 4, "hour": "11:00", "available": true },
+         { "id": 5, "hour": "12:00", "available": true },
+         { "id": 6, "hour": "13:00", "available": true },
+         { "id": 7, "hour": "14:00", "available": true },
+         { "id": 8, "hour": "15:00", "available": false },
+         { "id": 9, "hour": "16:00", "available": true },
+        { "id": 10, "hour": "17:00", "available": false },
+        { "id": 11, "hour": "18:00", "available": true },
+        { "id": 12, "hour": "19:00", "available": true },
+        { "id": 13, "hour": "20:00", "available": true} ,
+    ]
+    },
+    {
+        "id": 3,
+    "dayName": "Jutro",
+    "dayDate": "09.11",
+    "availableHours": [
+        { "id": 1, "hour": "8:00", "available": true },
+         { "id": 2, "hour": "9:00", "available": false },
+         { "id": 3, "hour": "10:00", "available": true },
+         { "id": 4, "hour": "11:00", "available": true },
+         { "id": 5, "hour": "12:00", "available": true },
+         { "id": 6, "hour": "13:00", "available": true },
+         { "id": 7, "hour": "14:00", "available": true },
+         { "id": 8, "hour": "15:00", "available": false },
+         { "id": 9, "hour": "16:00", "available": true },
+        { "id": 10, "hour": "17:00", "available": false },
+        { "id": 11, "hour": "18:00", "available": true },
+        { "id": 12, "hour": "19:00", "available": true },
+        { "id": 13, "hour": "20:00", "available": true} ,
+    ]
+    },
+    {
+        "id": 4,
+    "dayName": "Pojutrze",
+    "dayDate": "10.11",
+    "availableHours": [
+        { "id": 1, "hour": "8:00", "available": true },
+         { "id": 2, "hour": "9:00", "available": false },
+         { "id": 3, "hour": "10:00", "available": true },
+         { "id": 4, "hour": "11:00", "available": true },
+         { "id": 5, "hour": "12:00", "available": true },
+         { "id": 6, "hour": "13:00", "available": true },
+         { "id": 7, "hour": "14:00", "available": true },
+         { "id": 8, "hour": "15:00", "available": false },
+         { "id": 9, "hour": "16:00", "available": true },
+        { "id": 10, "hour": "17:00", "available": false },
+        { "id": 11, "hour": "18:00", "available": true },
+        { "id": 12, "hour": "19:00", "available": true },
+        { "id": 13, "hour": "20:00", "available": true} ,
+    ]
+    },
+    {
+            "id": 5,
+    "dayName": "",
+    "dayDate": "11.11",
+    "availableHours": [
+        { "id": 1, "hour": "8:00", "available": true },
+         { "id": 2, "hour": "9:00", "available": false },
+         { "id": 3, "hour": "10:00", "available": true },
+         { "id": 4, "hour": "11:00", "available": true },
+         { "id": 5, "hour": "12:00", "available": true },
+         { "id": 6, "hour": "13:00", "available": true },
+         { "id": 7, "hour": "14:00", "available": true },
+         { "id": 8, "hour": "15:00", "available": false },
+         { "id": 9, "hour": "16:00", "available": true },
+        { "id": 10, "hour": "17:00", "available": false },
+        { "id": 11, "hour": "18:00", "available": true },
+        { "id": 12, "hour": "19:00", "available": true },
+        { "id": 13, "hour": "20:00", "available": true} ,
+    ]
+    },
+    
+
+]
+
+
+
+const ShowOpenHours = (data: Array<any>) => {
+    return (
+        data.map((date) => {
+            return (
+                <div className="datepicker__dayrow flex flex-col gap-2" key={date.id}>
+                <div className="datepicker__day bg-white rounded-lg">
+                    <p className="text-blue-700">{date.dayName}</p>
+                    <p className="text-blue-700">{date.dayDate}</p>
+                </div>
+                    {date.availableHours.map((hourObj: any) => {
+                        return (
+                            <div className="datepicker__timerow-list">
+                                <Button className="datetime__time-item w-20" key={hourObj.id}>
+                                    {hourObj.available ? hourObj.hour : '-'}
+                                </Button>
+                            </div>
+                        )
+                    })}
+                </div>
+            )    
+        })
+    )
+}
+
+
+
+const SearchFormDatePicker = () => {
+    return ( 
+        <div className="datepicker bg-blue-700 p-4 flex rounded-3xl gap-4 max-h-96 overflow-hidden">
+            <Button className="changeDateLeft"><KeyboardArrowLeft/></Button>
+            <div className="datepicker_dates flex flex-wrap gap-4 w-fit justify-center overflow-hidden">{ ShowOpenHours(datepickerData) }</div>
+            <Button className="changeDateLeft"><KeyboardArrowRight/></Button>
+        </div>
+     );
+}
+ 
+export default SearchFormDatePicker;
