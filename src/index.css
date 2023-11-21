@@ -31,6 +31,14 @@ p{
   color: var(--text-clr-100);
 }
 
+.text-clr-100{
+  color: var(--text-clr-100);
+}
+
+.text-clr-200{
+  color: var(--text-clr-200);
+}
+
 .container-bg{
   background: var(--box-bg-clr-100);
 }
@@ -43,11 +51,6 @@ p{
   background: var(--box-bg-clr-200);
 }
 
-.datepicker__action button{
-  font-size: 1.5rem;
-  padding: 1em;
-}
-
 .icon-clr{
   color: var(--clr-primary-100);
 }
@@ -55,6 +58,27 @@ p{
 .icon-clr :is(:hover, :active) {
   color: var(--clr-primary-200);
 }
+
+.dashboard__form .dashboard__item{
+  margin-block: 1rem;
+}
+footer ul > li :not(ul > .nav-item){
+  font-weight: 300;
+}
+footer ul>li{
+  font-weight: 600;
+  color: var(--text-clr-200);
+}
+
+
+.container_bg_layer{
+  position: absolute;
+  z-index: 999;
+  background-image: linear-gradient(#1b253c41, #2e78f788);
+  width: 100%;
+  height: 100%;
+}
+
 
 html{
   font-family: 'Inter', system-ui, sans-serif;}

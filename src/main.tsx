@@ -11,6 +11,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Dashboard from './components/pages/Dashboard.tsx'
+import Authentication from './components/pages/Authentication.tsx'
 
 const router = createBrowserRouter([
   {
@@ -20,11 +21,19 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard/>
+  },
+  {
+    path: "/auth",
+    element: <Authentication/>
   }
 ])
 
 
 const theme = extendTheme({
+  fonts: {
+    heading: `'Outfit', sans-serif`,
+    body: `'Inter', sans-serif`,
+  },
   colors: {
     brand: {
       // green colors
@@ -39,6 +48,34 @@ const theme = extendTheme({
     }
   },
   components: {
+    FormLabel: {
+      baseStyle: {
+        fontWeight: 'bold'
+      }
+    }
+    ,
+    Input: {
+      baseStyle: {
+        field: {
+        borderRadius: '16rem',
+        },
+      },
+      variants: {
+        
+        solid: (props: StyleFunctionProps) => ({
+          bg: props.colorMode === 'dark' ? 'red.400' : 'brand.100',
+          color: "white",
+          _hover: {
+            bg:  props.colorMode === 'dark' ? 'red.400' : 'brand.100',
+          },
+          _active: {
+            bg: props.colorMode === 'dark' ? 'red.400' : 'brand.100',
+          }
+          
+        })
+      }
+    }
+    ,
     Button: {
       // 1. We can update the base styles
       baseStyle: {

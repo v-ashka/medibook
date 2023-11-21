@@ -1,5 +1,6 @@
 import { Button } from "@chakra-ui/react";
 import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
+import React from "react";
 
 const datepickerData: Array<any> = [
     {
@@ -107,6 +108,10 @@ const datepickerData: Array<any> = [
 ]
 
 
+interface SearchFormDatePickerProps{
+    className?: string
+}
+
 
 const ShowOpenHours = (data: Array<any>) => {
     return (
@@ -136,9 +141,9 @@ const ShowOpenHours = (data: Array<any>) => {
 
 
 
-const SearchFormDatePicker = () => {
+const SearchFormDatePicker: React.FC<SearchFormDatePickerProps> = ({className=''}) => {
     return ( 
-        <div className="datepicker bg-blue-700 p-4 flex rounded-3xl gap-4 h-96  overflow-hidden justify-center">
+        <div className={`datepicker bg-blue-700 p-4 flex rounded-3xl gap-4 h-96  overflow-hidden justify-center ${className}`}>
             <Button className="changeDateLeft"><KeyboardArrowLeft/></Button>
             <div className="datepicker_dates flex flex-row gap-4 w-fit overflow-hidden overflow-x-scroll rounded-lg backdrop-blur-lg">{ ShowOpenHours(datepickerData) }</div>
             <Button className="changeDateLeft"><KeyboardArrowRight/></Button>
