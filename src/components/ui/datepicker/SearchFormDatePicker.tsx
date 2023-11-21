@@ -113,14 +113,16 @@ const ShowOpenHours = (data: Array<any>) => {
         data.map((date) => {
             return (
                 <div className="datepicker__dayrow flex flex-col gap-2" key={date.id}>
-                <div className="datepicker__day bg-white rounded-lg">
+                <div className="datepicker__day bg-white rounded-lg h-14 flex justify-center flex-col">
                     <p className="text-blue-700">{date.dayName}</p>
                     <p className="text-blue-700">{date.dayDate}</p>
                 </div>
                     {date.availableHours.map((hourObj: any) => {
+                        const innerKey = `${date.id}-${hourObj.id}`
+
                         return (
-                            <div className="datepicker__timerow-list">
-                                <Button className="datetime__time-item w-20" key={hourObj.id}>
+                            <div className="datepicker__timerow-list"key={innerKey}>
+                                <Button className="datetime__time-item w-20" >
                                     {hourObj.available ? hourObj.hour : '-'}
                                 </Button>
                             </div>
@@ -136,9 +138,9 @@ const ShowOpenHours = (data: Array<any>) => {
 
 const SearchFormDatePicker = () => {
     return ( 
-        <div className="datepicker bg-blue-700 p-4 flex rounded-3xl gap-4 max-h-96 overflow-hidden">
+        <div className="datepicker bg-blue-700 p-4 flex rounded-3xl gap-4 h-96  overflow-hidden justify-center">
             <Button className="changeDateLeft"><KeyboardArrowLeft/></Button>
-            <div className="datepicker_dates flex flex-wrap gap-4 w-fit justify-center overflow-hidden">{ ShowOpenHours(datepickerData) }</div>
+            <div className="datepicker_dates flex flex-row gap-4 w-fit overflow-hidden overflow-x-scroll rounded-lg backdrop-blur-lg">{ ShowOpenHours(datepickerData) }</div>
             <Button className="changeDateLeft"><KeyboardArrowRight/></Button>
         </div>
      );

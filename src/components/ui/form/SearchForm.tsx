@@ -1,9 +1,9 @@
 import { LocationCity, LocationCityOutlined, OnlinePrediction } from "@mui/icons-material";
-import BtnIconText from "./BtnIconText";
+import BtnIconText from "../BtnIconText";
 import InputSearchForm from "./InputSearchForm";
 import { Button, Checkbox, CheckboxGroup, FormControl, FormHelperText, Stack } from "@chakra-ui/react";
-import PriceInputSearchForm from "./PriceInputSearchForm";
-import SearchFormDatePicker from "./SearchFormDatePicker";
+import PriceInputSearchForm from "../form/PriceInputSearchForm";
+import SearchFormDatePicker from "../datepicker/SearchFormDatePicker";
 
 const SearchForm = () => {
     // const []

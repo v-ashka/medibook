@@ -6,6 +6,24 @@ import { ChakraProvider, extendBaseTheme } from '@chakra-ui/react'
 import { extendTheme } from '@chakra-ui/react'
 import { StyleFunctionProps } from '@chakra-ui/react'
 
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Dashboard from './components/pages/Dashboard.tsx'
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard/>
+  }
+])
+
+
 const theme = extendTheme({
   colors: {
     brand: {
@@ -28,6 +46,27 @@ const theme = extendTheme({
         borderRadius: '4rem',
       },
       variants: {
+        'green-btn': {
+          bg: 'brand.200',
+          color: 'white',
+          _hover: {
+            bg: 'brand.300'
+          },
+          _active: {
+            bg: 'brand.300'
+          }
+        },
+        'danger-btn': {
+          bg: 'red.500',
+          color: 'white',
+          _hover: {
+            bg: 'red.600'
+          },
+          _active: {
+            bg: 'red.600'
+          }
+        },
+
         solid: (props: StyleFunctionProps) => ({
           bg: props.colorMode === 'dark' ? 'red.400' : 'brand.500',
           color: "white",
@@ -44,10 +83,13 @@ const theme = extendTheme({
   }
 });
 
+
+
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
-      <App />
+      <RouterProvider router={router} />
       </ChakraProvider>
   </React.StrictMode>,
 )

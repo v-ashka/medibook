@@ -1,10 +1,19 @@
-import headerImage from '../assets/img/header-img.png'
-import CardContainer from './CardsContainer';
-import SearchForm from './SearchForm';
+import { Divider } from '@chakra-ui/react';
+import headerImage from '../../assets/img/header-img.png'
+import CardContainer from '../ui/card/CardsContainer';
+// import DashboardPanel from '../DashBoardPanel';
+import SearchForm from '../ui/form/SearchForm';
+import BannerText from '../ui/BannerText';
 
 const Home = () => {
     return (<main>
         {/* Banner */}
+        <BannerText btnTitleBold='Specjaliści' btnTitle='w jednym miejscu' btnSubtitle='Znajdź lekarza i umów wizytę kiedy chcesz.'/>
+        {/* Home Form component */}
+        <SearchForm />
+        {/* card */}
+        <CardContainer />        
+
         <div className="banner flex justify-between m-10 mt-20">
 
             <div className="banner__content">
@@ -12,13 +21,8 @@ const Home = () => {
                 <p className="banner__subtitle text-xl md:text-2xl z-50 max-w-md text-left leading-9">Znajdź lekarza i umów wizytę kiedy chcesz.</p>
                 
             </div>
-            <div className="hero-image"><img src={headerImage} alt="Header image" className="absolute -z-50 top-0 right-0 max-w-xs sm:max-w-sm md:max-w-lg"/></div>
+            
         </div>
-        {/* Home Form component */}
-        <SearchForm />
-        {/* card */}
-        <CardContainer />        
-
     </main>);
 }
  

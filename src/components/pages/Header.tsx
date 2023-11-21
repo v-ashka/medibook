@@ -2,12 +2,12 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel, Menu, MenuButton, MenuList, Bu
 import { Input } from '@chakra-ui/react'
 import { CircularProgress, CircularProgressLabel } from '@chakra-ui/react'
 import { Accessible, AccessibleForwardOutlined, MedicalServices, MedicalServicesOutlined, OutlinedFlag, Person, Person2Outlined, PersonOffOutlined, PersonOutlined } from '@mui/icons-material';
-import Logo from './Logo';
-import BtnIconText from './BtnIconText';
-
+import Logo from '../ui/Logo';
+import BtnIconText from '../ui/BtnIconText';
+import headerImage from '../../assets/img/header-img.png';
 
 const Header = () => {
-    return (
+    return (<>
       <header className='flex flex-col sm:flex-row items-center gap-4 justify-between'>
         
             <Logo aria-hidden="Logo" />
@@ -27,7 +27,9 @@ const Header = () => {
           </Menu>
             <BtnIconText btnTitle={"Zaloguj się"} icon={<Person/>} />
         </div>
-        </header>
+      </header>
+      <div className="hero-image"><img src={headerImage} alt="Header image" className="absolute -z-50 top-0 right-0 max-w-xs sm:max-w-sm md:max-w-lg" /></div>
+      </>
       );
 }
  

@@ -1,6 +1,6 @@
 import { Box, Divider, Image, SimpleGrid } from "@chakra-ui/react";
-import MyCard from "./MyCard";
-import avatarImg from '../assets/img/avatar.jpg';
+import MyCard from "../card/MyCard";
+import avatarImg from '../../../assets/img/avatar.jpg';
 
 const CardContainer = () => {
     return ( 

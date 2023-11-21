@@ -18,7 +18,13 @@
   --text-clr-100: #1B253C;
   --text-clr-200: #1B253C;
 
+  /* primary */
+
+  --clr-primary-100: #1d4ed8;
+  --clr-primary-200: #2e77f7;
+
   --box-bg-clr-100: #FDFDFD;
+  --box-bg-clr-200: #F8F8F8;
 }
 
 p{
@@ -33,6 +39,22 @@ p{
   background: var(--box-bg-clr-100);
 }
 
+.card__schedule{
+  background: var(--box-bg-clr-200);
+}
+
+.datepicker__action button{
+  font-size: 1.5rem;
+  padding: 1em;
+}
+
+.icon-clr{
+  color: var(--clr-primary-100);
+}
+
+.icon-clr :is(:hover, :active) {
+  color: var(--clr-primary-200);
+}
 
 html{
   font-family: 'Inter', system-ui, sans-serif;}
