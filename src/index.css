@@ -25,6 +25,7 @@
 
   --box-bg-clr-100: #FDFDFD;
   --box-bg-clr-200: #F8F8F8;
+  --box-bg-clr-300: #f1f1f1;
 }
 
 p{
@@ -48,6 +49,10 @@ p{
 }
 
 .card__schedule{
+  background: var(--box-bg-clr-200);
+}
+
+.card-visit-bg{
   background: var(--box-bg-clr-200);
 }
 

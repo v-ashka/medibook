@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import Dashboard from './components/pages/Dashboard.tsx'
 import Authentication from './components/pages/Authentication.tsx'
+import ClientDashboard from './components/pages/ClientDashboard.tsx'
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,12 @@ const router = createBrowserRouter([
   {
     path: "/auth",
     element: <Authentication/>
-  }
+  },
+  {
+    path: "/dashboard/client",
+    element: <ClientDashboard/>
+  },
+  
 ])
 
 
@@ -83,6 +89,26 @@ const theme = extendTheme({
         borderRadius: '4rem',
       },
       variants: {
+         'download-btn': {
+          bg: 'white.200',
+          color: 'black.200',
+          borderColor: 'brand.400',
+          borderWidth: '2px',
+          fontSize: '1rem',
+          fontWeight: 'semibold',
+          width: '100%',
+          py: 6,
+          _hover: {
+            bg: 'brand.400',
+            color: 'white',
+            borderColor: 'brand.500',
+          },
+          _active: {
+            bg: 'brand.400',
+            color: 'white',
+            borderColor: 'brand.500',
+          }
+        },
         'green-btn': {
           bg: 'brand.200',
           color: 'white',

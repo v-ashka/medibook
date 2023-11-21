@@ -31,7 +31,7 @@ const Header = () => {
               
             </MenuList>
           </Menu>
-          <Button as={ReactRouterLink} to="/login" leftIcon={<Person />}>Zaloguj się</Button>
+          <Button as={ReactRouterLink} to="/auth" leftIcon={<Person />}>Zaloguj się</Button>
         </div>
       </header>
       <div className="hero-image"><img src={headerImage} alt="Header image" className="absolute -z-50 top-0 right-0 max-w-xs sm:max-w-sm md:max-w-lg" /></div>
