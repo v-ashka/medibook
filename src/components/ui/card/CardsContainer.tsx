@@ -1,6 +1,8 @@
-import { Box, Divider, Image, SimpleGrid } from "@chakra-ui/react";
+import { Box, Button, Divider, Image, Menu, MenuButton, MenuItem, MenuList, SimpleGrid } from "@chakra-ui/react";
 import MyCard from "../card/MyCard";
 import avatarImg from '../../../assets/img/avatar.jpg';
+import { MoreHorizOutlined } from "@mui/icons-material";
+import CardInnerContent from "./CardInnerContent";
 
 const CardContainer = () => {
     return ( 
@@ -12,37 +14,23 @@ const CardContainer = () => {
                 </div>
             </MyCard>
             <MyCard>
-                <div className="card__content p-6">
-                    <div className="card_content_header flex gap-4 text-left mb-2">
-                        <Image src={avatarImg}
-                            borderRadius='full'
-                            boxSize='50px'
-                            alt="Avatar image" />
-                        <div className="card_name flex flex-col">
-                            <p className="font-bold">dr. Adam Adamczyk</p>
-                            <p>Kardiochirurg, Kardiolog</p>
-                        </div>
-                    </div>
-                    <Divider />
-                </div>
+                <CardInnerContent/>
             </MyCard>
             <MyCard>
-                <div className="card__content p-6 text-left">
-                    <p className="text-4xl ">Twoje zaplanowane wizyty:</p>
-                    <p className="text-5xl font-bold py-8">5</p>
-                </div>
+                               <CardInnerContent/>
+
             </MyCard>
             <MyCard>
-                <div className="card__content p-6 text-left">
-                    <p className="text-4xl ">Twoje zaplanowane wizyty:</p>
-                    <p className="text-5xl font-bold py-8">5</p>
-                </div>
+                               <CardInnerContent/>
+
             </MyCard>
               <MyCard>
-                <div className="card__content p-6 text-left">
-                    <p className="text-4xl ">Twoje zaplanowane wizyty:</p>
-                    <p className="text-5xl font-bold py-8">5</p>
-                </div>
+                                <CardInnerContent/>
+
+            </MyCard>
+                <MyCard>
+                                <CardInnerContent/>
+
             </MyCard>
   
 </SimpleGrid>
