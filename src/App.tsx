@@ -5,12 +5,13 @@ import './App.css'
 import Header from './components/pages/Header'
 import Home from './components/pages/Home'
 import Footer from './components/pages/Footer'
+import { Button, ColorModeScript, useColorMode, useColorModeValue } from '@chakra-ui/react'
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
-      <>
+    <>
       <Header />
       <Home />
       <Footer/>

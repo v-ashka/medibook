@@ -1,4 +1,4 @@
-import { Tabs, TabList, TabPanels, Tab, TabPanel, Menu, MenuButton, MenuList, Button, MenuItem, InputGroup, InputRightElement } from '@chakra-ui/react'
+import { Tabs, TabList, TabPanels, Tab, TabPanel, Menu, MenuButton, MenuList, Button, MenuItem, InputGroup, InputRightElement, useColorMode } from '@chakra-ui/react'
 import { Input } from '@chakra-ui/react'
 import { CircularProgress, CircularProgressLabel } from '@chakra-ui/react'
 import { Accessible, AccessibleForwardOutlined, MedicalServices, MedicalServicesOutlined, OutlinedFlag, Person, Person2Outlined, PersonOffOutlined, PersonOutlined, Search } from '@mui/icons-material';
@@ -8,6 +8,7 @@ import headerImage from '../../assets/img/header-img.png';
 import { Link as ReactRouterLink } from 'react-router-dom'
 
 const Header = () => {
+   const { toggleColorMode } = useColorMode()
     return (<>
       <header className='flex flex-col sm:flex-row items-center gap-4 justify-between'>
         
@@ -24,8 +25,8 @@ const Header = () => {
             <MenuButton as={Button} rightIcon={<AccessibleForwardOutlined />}>
               Opcje widoku
             </MenuButton>
-            <MenuList>
-              <MenuItem minH='48px'>
+            <MenuList> 
+              <MenuItem minH='48px' onClick={toggleColorMode}>
                 <span>Zmień schemat kolorów</span>
               </MenuItem>
               

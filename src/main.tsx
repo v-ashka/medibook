@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
-import { ChakraProvider, extendBaseTheme } from '@chakra-ui/react'
+import { ChakraProvider, ColorModeScript, extendBaseTheme, ThemeConfig } from '@chakra-ui/react'
 import { extendTheme } from '@chakra-ui/react'
 import { StyleFunctionProps } from '@chakra-ui/react'
 
@@ -33,6 +33,12 @@ const router = createBrowserRouter([
   },
   
 ])
+
+
+const configTheme = {
+  initialColorMode: "dark",
+  useSystemColorMode: false,
+}
 
 
 const theme = extendTheme({
@@ -69,13 +75,14 @@ const theme = extendTheme({
       variants: {
         
         solid: (props: StyleFunctionProps) => ({
-          bg: props.colorMode === 'dark' ? 'red.400' : 'brand.100',
-          color: "white",
+          bg: props.colorMode === 'dark' ? 'yellow.400' : 'brand.100',
+          color: props.colorMode === 'dark' ? 'black' : 'white',
+          // color: "white",
           _hover: {
-            bg:  props.colorMode === 'dark' ? 'red.400' : 'brand.100',
+            bg:  props.colorMode === 'dark' ? 'yellow.500' : 'brand.100',
           },
           _active: {
-            bg: props.colorMode === 'dark' ? 'red.400' : 'brand.100',
+            bg: props.colorMode === 'dark' ? 'yellow.600' : 'brand.100',
           }
           
         })
@@ -117,7 +124,8 @@ const theme = extendTheme({
           },
           _active: {
             bg: 'brand.300'
-          }
+          },
+          
         },
         'danger-btn': {
           bg: 'red.500',
@@ -131,13 +139,13 @@ const theme = extendTheme({
         },
 
         solid: (props: StyleFunctionProps) => ({
-          bg: props.colorMode === 'dark' ? 'red.400' : 'brand.500',
-          color: "white",
+          bg: props.colorMode === 'dark' ? 'yellow' : 'brand.500',
+          color: props.colorMode === 'dark' ? 'black' : 'white',
           _hover: {
-            bg:  props.colorMode === 'dark' ? 'red.400' : 'brand.400',
+            bg:  props.colorMode === 'dark' ? 'yellow.100' : 'brand.400',
           },
           _active: {
-            bg: props.colorMode === 'dark' ? 'red.400' : 'brand.600',
+            bg: props.colorMode === 'dark' ? 'yellow.100' : 'brand.600',
           }
           
         })
@@ -148,10 +156,9 @@ const theme = extendTheme({
 
 
 
-
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme} >
       <RouterProvider router={router} />
       </ChakraProvider>
   </React.StrictMode>,

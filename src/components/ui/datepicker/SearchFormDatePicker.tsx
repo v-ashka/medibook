@@ -119,8 +119,8 @@ const ShowOpenHours = (data: Array<any>) => {
             return (
                 <div className="datepicker__dayrow flex flex-col gap-2" key={date.id}>
                 <div className="datepicker__day bg-white rounded-lg h-14 flex justify-center flex-col">
-                    <p className="text-blue-700">{date.dayName}</p>
-                    <p className="text-blue-700">{date.dayDate}</p>
+                    <p className="text-blue-700 ">{date.dayName}</p>
+                    <p className="text-blue-700 ">{date.dayDate}</p>
                 </div>
                     {date.availableHours.map((hourObj: any) => {
                         const innerKey = `${date.id}-${hourObj.id}`
@@ -145,7 +145,7 @@ const SearchFormDatePicker: React.FC<SearchFormDatePickerProps> = ({className=''
     return ( 
         <div className={`datepicker bg-blue-700 p-4 flex rounded-3xl gap-4 h-96  overflow-hidden justify-center ${className}`}>
             <Button className="changeDateLeft"><KeyboardArrowLeft/></Button>
-            <div className="datepicker_dates flex flex-row gap-4 w-fit overflow-hidden overflow-x-scroll rounded-lg backdrop-blur-lg">{ ShowOpenHours(datepickerData) }</div>
+            <div className="datepicker_dates flex flex-row gap-4 w-fit overflow-y-scroll overflow-x-scroll rounded-lg backdrop-blur-lg">{ ShowOpenHours(datepickerData) }</div>
             <Button className="changeDateLeft"><KeyboardArrowRight/></Button>
         </div>
      );

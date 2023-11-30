@@ -1,4 +1,4 @@
-import { Button, Checkbox, FormControl, FormHelperText, FormLabel, HStack, Image, Input, SimpleGrid, Stack, Text, useRadioGroup } from "@chakra-ui/react";
+import { Button, Checkbox, FormControl, FormHelperText, FormLabel, HStack, Image, Input, SimpleGrid, Stack, Text, useColorMode, useRadioGroup } from "@chakra-ui/react";
 import loginImage from '../../assets/img/login-img.jpg'
 import { Link as ReactRouterLink } from 'react-router-dom'
 import Header from "./Header";
@@ -89,6 +89,7 @@ const Register = () => {
 
 
 const Login = () => {
+    console.log('test')
     return (
 <SimpleGrid columns={[1,1,1,2]} spacing={'50px'} className="my-10">
                 <div className="container_col container-bg drop-shadow-md p-6 rounded-3xl">
@@ -108,7 +109,7 @@ const Login = () => {
                             <Button
                                 mt={4}
                                 leftIcon={<Done />}
-                            variant={'green-btn'}
+                            variant={colorMode === 'dark' ? 'danger-btn' : 'green-btn'}
                             >
                             Zaloguj się
                             </Button>

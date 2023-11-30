@@ -23,7 +23,7 @@ const Dashboard = () => {
             <main>
                 <BannerText btnTitle="Witaj" btnTitleBold="{username}" btnSubtitle='Sprawdź swoje ostatnie wizyty' />
                 {/* dashboard panel  */}
-                <SimpleGrid columns={[1, 1, 1 , 2, 2]} spacing='50px' className="mt-48">
+                <SimpleGrid columns={[1, 1, 1 , 1, 2, 2]} spacing='50px' className="mt-48">
                     <DashboardPanel />
                     <div className="container-bg rounded-3xl p-6 drop-shadow-md">
                         <p className='font-bold text-left text-2xl py-2 px-2'>Ustal grafik</p>
