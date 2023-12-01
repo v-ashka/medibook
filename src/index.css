@@ -17,6 +17,7 @@
 :root{
   --bg-clr-100: #FFF;
 
+  --text-clr-white: white;
   --text-clr-100: #1B253C;
   --text-clr-200: #1B253C;
 
@@ -55,9 +56,10 @@ html[data-theme='system']{
     --box-bg-clr-300: #f1f1f1;
 }
 
-html[data-theme='dark']{
+html[data-th='contrast']{
   --bg-clr-100: #000000;
   
+    --text-clr-white: black;
     --text-clr-100: #ffffff;
     --text-clr-200: #ffffff;
   
@@ -70,6 +72,8 @@ html[data-theme='dark']{
     --clr-secondary-100: #00ff84;
     --clr-secondary-200: #0d7038;
     --clr-secondary-300: #0d7038;
+
+    --clr-secondary-100-op50: hsla(151, 100%, 50%, 0.769);
   
     --box-bg-clr-100: #242424;
     --box-bg-clr-200: #444444;
@@ -80,6 +84,24 @@ html[data-theme='dark']{
 html[data-th='contrast'] .hero-image img{
   display: none;
 }
+
+.footer-box{
+  background-color: hsla(151, 100%, 50%, 0.769);
+}
+
+html[data-th='contrast'] .footer-box{
+  background-color: var(--box-bg-clr-100);
+}
+.footer-box-link{
+  background-color: var(--clr-primary-200);
+  color: var(--text-clr-white);
+}
+
+.footer-box-link:hover{
+  background-color: var(--clr-primary-200);
+}
+
+
 
 body{
   background-color: var(--bg-clr-100) !important;

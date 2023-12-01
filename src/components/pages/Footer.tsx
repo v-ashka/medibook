@@ -10,7 +10,7 @@ const Footer = () => {
                 // bg="green.200"
                 w="100%"
                 p={20}
-                className="rounded-3xl mt-28 drop-shadow-md bg-green-300"
+                className="rounded-3xl mt-28 drop-shadow-md footer-box"
             >
                 <SimpleGrid columns={[1, 1, 2, 2]} spacing={'50px'}>
                     <div className="banner_col">
