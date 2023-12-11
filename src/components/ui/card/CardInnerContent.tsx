@@ -32,8 +32,8 @@ const CardInnerContent = (props: any) => {
 
                     </div>
                     <div className="card_content_footer flex flex-wrap justify-evenly">
-                        <Button>Zmień datę</Button>
-                        <Button variant={"danger-btn"}>Anuluj wizytę</Button>
+                        <Button variant={"outline"} colorScheme="blue">Zmień datę</Button>
+                        <Button variant={"outline"} colorScheme="red">Anuluj wizytę</Button>
                     </div>
                 </div>
      );

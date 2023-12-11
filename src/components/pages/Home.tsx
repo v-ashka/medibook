@@ -5,6 +5,8 @@ import CardContainer from '../ui/card/CardsContainer';
 import SearchForm from '../ui/form/SearchForm';
 import BannerText from '../ui/BannerText';
 import Footer from './Footer';
+import CTACardBoxes from '../ui/card/CTACardBoxes';
+import NewUsers from '../ui/NewUser';
 
 const Home = () => {
     return (<main>
@@ -14,6 +16,13 @@ const Home = () => {
         <SearchForm />
         {/* card */}
         <CardContainer />        
+        {/* BannerTop */}
+        {/* HomeForm */}
+        {/* CTACardBoxes */}
+        <CTACardBoxes/>
+        
+        <NewUsers/>
+        {/* NewUsers */}
     </main>);
 }
  
