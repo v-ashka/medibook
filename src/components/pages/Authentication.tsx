@@ -109,7 +109,6 @@ const Login = () => {
                             <Button
                                 mt={4}
                                 leftIcon={<Done />}
-                            variant={colorMode === 'dark' ? 'danger-btn' : 'green-btn'}
                             >
                             Zaloguj się
                             </Button>
@@ -135,7 +134,7 @@ const Authentication = () => {
     return ( 
         <>
             <Header />
-            <Register/>
+            <Login/>
         <Footer/>
             </>
      );

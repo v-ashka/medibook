@@ -85,7 +85,7 @@ const datepickerData: Array<any> = [
     },
     {
             "id": 5,
-    "dayName": "",
+    "dayName": "-",
     "dayDate": "11.11",
     "availableHours": [
         { "id": 1, "hour": "8:00", "available": true },
@@ -145,7 +145,7 @@ const SearchFormDatePicker: React.FC<SearchFormDatePickerProps> = ({className=''
     return ( 
         <div className={`datepicker bg-blue-700 p-4 flex rounded-3xl gap-4 h-96  overflow-hidden justify-center ${className}`}>
             <Button className="changeDateLeft"><KeyboardArrowLeft/></Button>
-            <div className="datepicker_dates flex flex-row gap-4 w-fit overflow-y-scroll overflow-x-scroll rounded-lg backdrop-blur-lg">{ ShowOpenHours(datepickerData) }</div>
+            <div className="datepicker_dates flex flex-row gap-4 w-fit overflow-scroll rounded-lg backdrop-blur-lg">{ ShowOpenHours(datepickerData) }</div>
             <Button className="changeDateLeft"><KeyboardArrowRight/></Button>
         </div>
      );

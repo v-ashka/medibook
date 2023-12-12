@@ -102,6 +102,22 @@ html[data-th='contrast'] .footer-box{
 }
 
 
+*::-webkit-scrollbar {
+  width: .3em;
+  height: .3em;
+  
+}
+
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--clr-secondary-100);
+  outline: 1px solid slategrey;
+  /* border: 1px solid black; */
+    border-radius: 1rem;
+}
 
 body{
   background-color: var(--bg-clr-100) !important;

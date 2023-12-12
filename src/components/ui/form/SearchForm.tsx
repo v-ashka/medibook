@@ -1,4 +1,4 @@
-import { LocationCity, LocationCityOutlined, OnlinePrediction } from "@mui/icons-material";
+import { LocationCity, LocationCityOutlined, OnlinePrediction, Search } from "@mui/icons-material";
 import BtnIconText from "../BtnIconText";
 import InputSearchForm from "./InputSearchForm";
 import { Button, Checkbox, CheckboxGroup, FormControl, FormHelperText, Stack } from "@chakra-ui/react";
@@ -49,7 +49,7 @@ const SearchForm = () => {
                         colorScheme='teal'
                         type='submit'
                     >
-                     <OnlinePrediction />   Szukaj wizyty 
+                     <div className="flex flex-wrap items-center gap-2"><Search/>Szukaj wizyty </div>
                     </Button>
                 </div>
                 </FormControl>
