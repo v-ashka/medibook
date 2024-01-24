@@ -6,7 +6,7 @@ type MyCardProps = {
 
 const MyCard = (props: MyCardProps) => {
     return ( 
-        <Box className="container-bg drop-shadow-md rounded-xl max-w-full sm:max-w-md md:max-w-lg lg:max-w-4xl">
+        <Box className="container-bg drop-shadow-md rounded-xl max-w-full sm:max-w-xl md:max-w-lg lg:max-w-4xl">
             {props.children}
         </Box>
      );

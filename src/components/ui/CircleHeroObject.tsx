@@ -6,7 +6,7 @@ interface CircleHeroObjectProps{
 
 const CircleHeroObject: React.FC<CircleHeroObjectProps> = ({className = ''}) => {
     return (  
-        <Circle size={'250px'} className={`absolute -z-50 bg-green-400 dark:bg-yellow-300 ${className}`} />
+        <Circle size={'250px'} className={`absolute -z-50 circle-background ${className}`} />
     );
 }
  

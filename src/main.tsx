@@ -117,7 +117,7 @@ const theme = extendTheme({
           }
         },
         'green-btn': {
-          bg: 'brand.200',
+          bg: 'brand.300',
           color: 'white',
           _hover: {
             bg: 'brand.300'

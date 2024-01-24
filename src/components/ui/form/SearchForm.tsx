@@ -9,7 +9,7 @@ const SearchForm = () => {
     // const []
 
     return (  
-        <div className="searchform drop-shadow-md rounded-3xl max-w-full sm:max-w-md md:max-w-lg lg:max-w-4xl">
+        <div className="searchform drop-shadow-md rounded-3xl max-w-full sm:max-w-full md:max-w-full lg:max-w-4xl">
             <FormControl className="flex flex-wrap justify-between">
             <div className="searchform__col p-6">
                 
@@ -31,7 +31,7 @@ const SearchForm = () => {
                     
                 <p className="searchform__label font-bold text-left mb-2 text-lg">Dostępność dla pacjentów</p>
                 <div className="searchform__item gap-2 flex flex-wrap mb-4">
-                    <CheckboxGroup colorScheme='blue' defaultValue={['naruto', 'kakashi']}>
+                    <CheckboxGroup colorScheme='blue' defaultValue={['na wozku lub o kulach', 'z problemami ze sluchem', 'z problemami ze wzrokiem']}>
   <Stack spacing={[1, 5]} direction={['column', 'column']}>
     <Checkbox value='1'>na wózku lub o kulach</Checkbox>
     <Checkbox value='2'>z problemami ze słuchem</Checkbox>
@@ -49,6 +49,7 @@ const SearchForm = () => {
                         colorScheme='teal'
                         type='submit'
                     >
+
                      <div className="flex flex-wrap items-center gap-2"><Search/>Szukaj wizyty </div>
                     </Button>
                 </div>

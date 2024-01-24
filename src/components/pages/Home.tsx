@@ -19,9 +19,9 @@ const Home = () => {
         {/* BannerTop */}
         {/* HomeForm */}
         {/* CTACardBoxes */}
-        <CTACardBoxes/>
+        {/* <CTACardBoxes/> */}
         
-        <NewUsers/>
+        {/* <NewUsers/> */}
         {/* NewUsers */}
     </main>);
 }

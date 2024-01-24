@@ -14,7 +14,7 @@ const Footer = () => {
             >
                 <SimpleGrid columns={[1, 1, 2, 2]} spacing={'50px'}>
                     <div className="banner_col">
-                        <Image src={ bannerFooterImg} className="rounded-3xl opacity-90"/>
+                        <Image src={ bannerFooterImg} className="rounded-3xl opacity-90" alt="Doctor checks patient fidings"/>
                     </div>
                     <div className="banner_col flex flex-col gap-2">
                         <p className="h1 text-2xl font-bold text-justify text-clr-200 font-family-outfit">Prowadzisz własny gabinet lub placówkę i szukasz nowych pacjentów?</p>

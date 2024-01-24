@@ -27,7 +27,7 @@ const UserCard: FC<UserCardProps>  = ({imageSrc=imgTemplate, name = 'Maciej', su
                     borderRadius='full'
                     boxSize='50px'
                     objectFit={'cover'}
-                    alt="Avatar image" />
+                    alt="Photo image" />
                 <div className="card_name flex flex-col">
                     <p className="font-bold">{shortcut} {name} { surname }</p>
                     <p>{ visitType }</p>

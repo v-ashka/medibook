@@ -1,15 +1,16 @@
 import { Button, Checkbox, FormControl, FormHelperText, FormLabel, HStack, Image, Input, SimpleGrid, Stack, Text, useColorMode, useRadioGroup } from "@chakra-ui/react";
 import loginImage from '../../assets/img/login-img.jpg'
-import { Link as ReactRouterLink } from 'react-router-dom'
+import { Link, Link as ReactRouterLink } from 'react-router-dom'
 import Header from "./Header";
 import Footer from "./Footer";
 import RadioCard from "../ui/form/RadioButton";
 import { Done, Person, Search } from "@mui/icons-material";
 import InputSearchForm from "../ui/form/InputSearchForm";
 import { Link as ChakraLink, LinkProps } from '@chakra-ui/react'
+import { useState } from "react";
 
 
-const Register = () => {
+const Register = (props: any) => {
     return (
 <SimpleGrid columns={[1,1,1,2]} spacing={'50px'} className="my-10 h-full">
                 <div className="container_col container-bg drop-shadow-md p-6 rounded-3xl">
@@ -70,7 +71,7 @@ const Register = () => {
                             >
                             Utwórz konto
                             </Button>
-                            <Text className="mt-2">Posiadasz już konto? <ChakraLink as={ReactRouterLink} to="/login" color={'brand.400'} fontWeight={'bold'}>Zaloguj się</ChakraLink></Text>
+                            <Text className="mt-2 flex items-center gap-2">Posiadasz już konto? <Link to="#" className="text-blue-700 font-bold" onClick={props.toggleSwitch}>Zaloguj się</Link></Text>
 
                         </div>
                        
@@ -88,8 +89,8 @@ const Register = () => {
 
 
 
-const Login = () => {
-    console.log('test')
+const Login = (props: any) => {
+    
     return (
 <SimpleGrid columns={[1,1,1,2]} spacing={'50px'} className="my-10">
                 <div className="container_col container-bg drop-shadow-md p-6 rounded-3xl">
@@ -112,7 +113,7 @@ const Login = () => {
                             >
                             Zaloguj się
                             </Button>
-                            <Text className="mt-2">Nie masz jeszcze konta? <ChakraLink as={ReactRouterLink} to="/login" color={'brand.400'} fontWeight={'bold'}>Zarejestruj się</ChakraLink></Text>
+                            <Text className="mt-2 flex items-center gap-2">Nie masz jeszcze konta? <Link to="#" className="text-blue-700 font-bold" onClick={props.toggleSwitch}>Zarejestruj się</Link></Text>
 
                         </div>
                        
@@ -131,10 +132,17 @@ const Login = () => {
 
 
 const Authentication = () => {
+    const [authSwitch, setauthSwitch] = useState(true);
+
+    function toggleSwitch(){
+        setauthSwitch(!authSwitch);
+    }
+
     return ( 
         <>
             <Header />
-            <Login/>
+
+            {authSwitch ? <Register  toggleSwitch={toggleSwitch}/> : <Login toggleSwitch={toggleSwitch}/>}
         <Footer/>
             </>
      );
