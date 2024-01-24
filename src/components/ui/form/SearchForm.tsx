@@ -49,7 +49,8 @@ const SearchForm = () => {
                         colorScheme='teal'
                         type='submit'
                     >
-                     <Search />   Szukaj wizyty 
+
+                     <div className="flex flex-wrap items-center gap-2"><Search/>Szukaj wizyty </div>
                     </Button>
                 </div>
                 </FormControl>

@@ -110,7 +110,6 @@ const Login = (props: any) => {
                             <Button
                                 mt={4}
                                 leftIcon={<Done />}
-                            // variant={colorMoe === 'dark' ? 'danger-btn' : 'green-btn'}
                             >
                             Zaloguj się
                             </Button>
@@ -142,6 +141,7 @@ const Authentication = () => {
     return ( 
         <>
             <Header />
+
             {authSwitch ? <Register  toggleSwitch={toggleSwitch}/> : <Login toggleSwitch={toggleSwitch}/>}
         <Footer/>
             </>

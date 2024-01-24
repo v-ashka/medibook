@@ -85,7 +85,7 @@ const datepickerData: Array<any> = [
     },
     {
             "id": 5,
-    "dayName": "",
+    "dayName": "-",
     "dayDate": "11.11",
     "availableHours": [
         { "id": 1, "hour": "8:00", "available": true },
