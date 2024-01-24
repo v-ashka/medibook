@@ -1,4 +1,4 @@
-import { Component, useState } from 'react'
+import { Component, useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -9,7 +9,10 @@ import { Button, ColorModeScript, useColorMode, useColorModeValue } from '@chakr
 
 function App() {
   // const [count, setCount] = useState(0)
+  const [dataTh, setDataTh] = useState(localStorage.getItem('dataTh') || 'system');
 
+  const currentDataThValue = document.documentElement;
+  currentDataThValue.setAttribute('data-th', dataTh);
   return (
     <>
       <Header />

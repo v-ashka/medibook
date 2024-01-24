@@ -25,6 +25,8 @@ const StarRating: FC<StarRatingProps> = ({rating, setRating, count=5, size=20}) 
                         onMouseEnter={() => setHover(ratingValue)}
                         onMouseLeave={() => setHover(null)}
                         className="cursor-pointer"
+                        title="star"
+                        aria-label="star icon"
                     >
                         <RadioGroup >
                             <Radio
@@ -33,7 +35,7 @@ const StarRating: FC<StarRatingProps> = ({rating, setRating, count=5, size=20}) 
                                 onChange={() => setRating(ratingValue)}
                                 display={'none'}
                                 aria-label="star rating radio input"
-                                
+                                aria-hidden="true"
                             >
                             </Radio>
                         </RadioGroup>

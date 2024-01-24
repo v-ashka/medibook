@@ -29,7 +29,7 @@ const DashboardPanel = () => {
                         <Image src={avatarImg}
                             borderRadius='full'
                             boxSize='50px'
-                            alt="Avatar image" />
+                            alt="Photo image" />
                         <div className="card_name flex flex-col">
                             <p className="font-bold">dr. Adam Adamczyk</p>
                             <p>Kardiochirurg, Kardiolog</p>

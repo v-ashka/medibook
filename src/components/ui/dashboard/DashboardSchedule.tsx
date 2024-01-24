@@ -23,7 +23,7 @@ const DashboardSchedule: FC<DashboardScheduleProps> = ({imageSrc=imgTemplate, na
                         <Image src={imageSrc}
                             borderRadius='full'
                             boxSize='50px'
-                            alt="Avatar image" />
+                            alt="Photo image" />
                         <div className="card_name flex flex-col">
                             <p className="font-bold">pacj. {name} { surname }</p>
                             <p>{ visitType }</p>

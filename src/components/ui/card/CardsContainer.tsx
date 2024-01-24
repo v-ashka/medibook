@@ -6,7 +6,7 @@ import CardInnerContent from "./CardInnerContent";
 
 const CardContainer = () => {
     return ( 
-        <SimpleGrid columns={[1, 2, 3, 3]} spacing='50px' className="mt-24">
+        <SimpleGrid columns={[1, 1, 2, 2, 3, 3]} spacing='50px' className="mt-24">
             <MyCard>
                 <div className="card__content p-6 text-left">
                     <p className="text-4xl ">Twoje zaplanowane wizyty:</p>
